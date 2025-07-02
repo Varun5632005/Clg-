@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Accessible Dropdown Menu</title>
+  <style>
+    body {
+      font-family: 'Instrument Sans', sans-serif;
+    }
+    .testClass {
+      background-color: #06194A;
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <nav class="testClass">
+    <div class="relative flex h-16 items-center justify-between">
+      <div class="flex flex-1 items-center justify-start">
+        <div class="w-full sm:ml-6 sm:block">
+          <div class="flex flex-wrap gap-x-3" id="menu-container">
+            <!-- Example Dropdown Template -->
+            <!-- Copy and modify for other menu items -->
+            <div class="relative group">
+              <button id="students-button" aria-haspopup="true" aria-expanded="false" aria-controls="students-menu" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white hover:text-gray-800 hover:bg-white rounded-md transition">Students
+                <svg class="w-4 h-4 ml-1 mt-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div id="students-menu" role="menu" class="absolute left-0 mt-2 w-24 hidden bg-white text-gray-800 rounded-md shadow-lg z-10 ">
+                <a href="#" role="menuitem" tabindex="0" class="block px-4 py-2 text-sm hover:bg-gray-100">Portal</a>
+                <a href="#" role="menuitem" tabindex="0" class="block px-4 py-2 text-sm hover:bg-gray-100">Results</a>
+              </div>
+            </div>
+
+            <!-- Additional Dropdowns -->
+            <div class="relative group">
+              <button id="faculty-button" aria-haspopup="true" aria-expanded="false" aria-controls="faculty-menu" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white hover:text-gray-800 hover:bg-white rounded-md transition">Faculty
+                <svg class="w-4 h-4 ml-1 mt-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div id="faculty-menu" role="menu" class="absolute left-0 mt-2 w-36 hidden bg-white text-gray-800 rounded-md shadow-lg z-10 focus:outline-none">
+                <a href="#" role="menuitem" tabindex="0" class="block px-4 py-2 text-sm hover:bg-gray-100">Details</a>
+                <a href="#" role="menuitem" tabindex="0" class="block px-4 py-2 text-sm hover:bg-gray-100">Achievements</a>
+              </div>
+            </div>
+
+             <div class="relative group">
+              <button id="faculty-button" aria-haspopup="true" aria-expanded="false" aria-controls="faculty-menu" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white hover:text-gray-800 hover:bg-white rounded-md transition">Academics
+                <svg class="w-4 h-4 ml-1 mt-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div id="faculty-menu" role="menu" class="absolute left-0 mt-2 w-36 hidden bg-white text-gray-800 rounded-md shadow-lg z-10 focus:outline-none">
+                <a href="#" role="menuitem" tabindex="0" class="block px-4 py-2 text-sm hover:bg-gray-100">Details</a>
+                <a href="#" role="menuitem" tabindex="0" class="block px-4 py-2 text-sm hover:bg-gray-100">Achievements</a>
+              </div>
+            </div>
+
+
+            <div class="relative group">
+              <button id="faculty-button" aria-haspopup="true" aria-expanded="false" aria-controls="faculty-menu" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white hover:text-gray-800 hover:bg-white rounded-md transition">Internships
+                <svg class="w-4 h-4 ml-1 mt-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div id="faculty-menu" role="menu" class="absolute left-0 mt-2 w-36 hidden bg-white text-gray-800 rounded-md shadow-lg z-10 focus:outline-none">
+                <a href="#" role="menuitem" tabindex="0" class="block px-4 py-2 text-sm hover:bg-gray-100">Details</a>
+                <a href="#" role="menuitem" tabindex="0" class="block px-4 py-2 text-sm hover:bg-gray-100">Achievements</a>
+              </div>
+            </div>
+
+
+            <div class="relative group">
+              <button id="faculty-button" aria-haspopup="true" aria-expanded="false" aria-controls="faculty-menu" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white hover:text-gray-800 hover:bg-white rounded-md transition">Placements
+                <svg class="w-4 h-4 ml-1 mt-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div id="faculty-menu" role="menu" class="absolute left-0 mt-2 w-36 hidden bg-white text-gray-800 rounded-md shadow-lg z-10 focus:outline-none">
+                <a href="#" role="menuitem" tabindex="0" class="block px-4 py-2 text-sm hover:bg-gray-100">Details</a>
+                <a href="#" role="menuitem" tabindex="0" class="block px-4 py-2 text-sm hover:bg-gray-100">Achievements</a>
+              </div>
+            </div>
+
+
+            <div class="relative group">
+              <button id="faculty-button" aria-haspopup="true" aria-expanded="false" aria-controls="faculty-menu" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white hover:text-gray-800 hover:bg-white rounded-md transition">MOU's
+                <svg class="w-4 h-4 ml-1 mt-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div id="faculty-menu" role="menu" class="absolute left-0 mt-2 w-36 hidden bg-white text-gray-800 rounded-md shadow-lg z-10 focus:outline-none">
+                <a href="#" role="menuitem" tabindex="0" class="block px-4 py-2 text-sm hover:bg-gray-100">Details</a>
+                <a href="#" role="menuitem" tabindex="0" class="block px-4 py-2 text-sm hover:bg-gray-100">Achievements</a>
+              </div>
+            </div>
+
+
+            <div class="relative group">
+              <button id="faculty-button" aria-haspopup="true" aria-expanded="false" aria-controls="faculty-menu" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white hover:text-gray-800 hover:bg-white rounded-md transition">Research
+                <svg class="w-4 h-4 ml-1 mt-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div id="faculty-menu" role="menu" class="absolute left-0 mt-2 w-36 hidden bg-white text-gray-800 rounded-md shadow-lg z-10 focus:outline-none">
+                <a href="#" role="menuitem" tabindex="0" class="block px-4 py-2 text-sm hover:bg-gray-100">Details</a>
+                <a href="#" role="menuitem" tabindex="0" class="block px-4 py-2 text-sm hover:bg-gray-100">Achievements</a>
+              </div>
+            </div>
+
+
+
+            <div class="relative group">
+              <button id="faculty-button" aria-haspopup="true" aria-expanded="false" aria-controls="faculty-menu" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white hover:text-gray-800 hover:bg-white rounded-md transition">E-News Letter
+                <svg class="w-4 h-4 ml-1 mt-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div id="faculty-menu" role="menu" class="absolute left-0 mt-2 w-36 hidden bg-white text-gray-800 rounded-md shadow-lg z-10 focus:outline-none">
+                <a href="#" role="menuitem" tabindex="0" class="block px-4 py-2 text-sm hover:bg-gray-100">Details</a>
+                <a href="#" role="menuitem" tabindex="0" class="block px-4 py-2 text-sm hover:bg-gray-100">Achievements</a>
+              </div>
+            </div>
+
+
+            <div class="relative group">
+              <button id="faculty-button" aria-haspopup="true" aria-expanded="false" aria-controls="faculty-menu" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white hover:text-gray-800 hover:bg-white rounded-md transition">Department Clubs
+                <svg class="w-4 h-4 ml-1 mt-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div id="faculty-menu" role="menu" class="absolute left-0 mt-2 w-36 hidden bg-white text-gray-800 rounded-md shadow-lg z-10 focus:outline-none">
+                <a href="#" role="menuitem" tabindex="0" class="block px-4 py-2 text-sm hover:bg-gray-100">Details</a>
+                <a href="#" role="menuitem" tabindex="0" class="block px-4 py-2 text-sm hover:bg-gray-100">Achievements</a>
+              </div>
+            </div>
+
+
+
+            <div class="relative group">
+              <button id="faculty-button" aria-haspopup="true" aria-expanded="false" aria-controls="faculty-menu" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white hover:text-gray-800 hover:bg-white rounded-md transition">BOS
+                <svg class="w-4 h-4 ml-1 mt-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div id="faculty-menu" role="menu" class="absolute left-0 mt-2 w-36 hidden bg-white text-gray-800 rounded-md shadow-lg z-10 focus:outline-none">
+                <a href="#" role="menuitem" tabindex="0" class="block px-4 py-2 text-sm hover:bg-gray-100">Details</a>
+                <a href="#" role="menuitem" tabindex="0" class="block px-4 py-2 text-sm hover:bg-gray-100">Achievements</a>
+              </div>
+            </div>
+
+            
+            <div class="relative group">
+              <button id="faculty-button" aria-haspopup="true" aria-expanded="false" aria-controls="faculty-menu" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white hover:text-gray-800 hover:bg-white rounded-md transition">Alumni Interaction
+                <svg class="w-4 h-4 ml-1 mt-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div id="faculty-menu" role="menu" class="absolute left-0 mt-2 w-36 hidden bg-white text-gray-800 rounded-md shadow-lg z-10 focus:outline-none">
+                <a href="#" role="menuitem" tabindex="0" class="block px-4 py-2 text-sm hover:bg-gray-100">Details</a>
+                <a href="#" role="menuitem" tabindex="0" class="block px-4 py-2 text-sm hover:bg-gray-100">Achievements</a>
+              </div>
+            </div>
+
+
+            <div class="relative group">
+              <button id="faculty-button" aria-haspopup="true" aria-expanded="false" aria-controls="faculty-menu" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white hover:text-gray-800 hover:bg-white rounded-md transition">Gallery
+                <svg class="w-4 h-4 ml-1 mt-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div id="faculty-menu" role="menu" class="absolute left-0 mt-2 w-36 hidden bg-white text-gray-800 rounded-md shadow-lg z-10 focus:outline-none">
+                <a href="#" role="menuitem" tabindex="0" class="block px-4 py-2 text-sm hover:bg-gray-100">Details</a>
+                <a href="#" role="menuitem" tabindex="0" class="block px-4 py-2 text-sm hover:bg-gray-100">Achievements</a>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    const setupDropdown = (buttonId, menuId) => {
+      const btn = document.getElementById(buttonId);
+      const menu = document.getElementById(menuId);
+
+      btn.addEventListener('click', () => {
+        const isOpen = menu.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', !isOpen);
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!btn.contains(e.target) && !menu.contains(e.target)) {
+          menu.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      btn.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          menu.classList.remove('hidden');
+          menu.querySelector('a').focus();
+        }
+      });
+
+      menu.addEventListener('keydown', (e) => {
+        const items = Array.from(menu.querySelectorAll('a'));
+        const index = items.indexOf(document.activeElement);
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          const next = (index + 1) % items.length;
+          items[next].focus();
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          const prev = (index - 1 + items.length) % items.length;
+          items[prev].focus();
+        } else if (e.key === 'Escape') {
+          menu.classList.add('hidden');
+          btn.focus();
+        }
+      });
+    };
+
+    // Add all dropdowns you want to activate below
+    setupDropdown('students-button', 'students-menu');
+    setupDropdown('faculty-button', 'faculty-menu');
+    // setupDropdown('academics-button', 'academics-menu'); // Repeat for more
+  </script>
+</body>
+</html>
